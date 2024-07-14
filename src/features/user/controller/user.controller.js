@@ -15,7 +15,7 @@ export const loginUser = (req, res) => {
   if (status) {
     const token = jwt.sign(
       { userId: status.id, userEmail: status.email },
-      "HelloWorld2024",
+      "secretKey2024",
       { expiresIn: "1h" }
     );
     res
